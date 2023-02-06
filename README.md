@@ -1,2 +1,4 @@
 # cardgame
-javascript tutorial
+# javascript tutorial
+
+Andrea Nicolai
