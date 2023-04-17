@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="counter">Punti =</span><span id="counter" class="counter">0</span>
+    </div>
+    <!--div per la variabile che ci permette di visualizzarla nel documento-->
+    <div id="tavoloDaGioco"></div>
+
+
+    <script>
+        carte = ["3foto.jpg", "3foto.jpg", "4foto.jpg", "4foto.jpg", "altracarta.jpg", "altracarta.jpg"]
+        let NcarteGirate = 0;
+        let primaCartaGirata = null
+        tavolo = document.querySelector('#tavoloDaGioco')
+
+        carte.forEach(element => {
+            tavolo.innerHTML += '<img id="' + element + '" src="pokemon-card-back.png" onclick="gira(this)" />'
+            console.log('<img id="' + element + '" src="pokemon-card-back.png" />')
+        });
+        var counter = document.getElementById("counter");
+        var count = 0;
+        //è la nostra variabile che ci fa avere lo score iniziale a 0 -->
+        function gira(carta) {
+            NcarteGirate++
+            console.log(NcarteGirate)
+            carta.src = carta.id
+            if (NcarteGirate == 1)
+                primaCartaGirata = carta
+            else {
+                NcarteGirate = 0
+                if (carta.src == primaCartaGirata.src) {
+                    count++;
+                    counter.textContent = count;
+                    //è la variabile che ci fa aumentare il punteggio//
+                } else {
+                    setTimeout(function() {
+                        carta.src = "pokemon-card-back.png";
+                        primaCartaGirata.src = "pokemon-card-back.png";
+                    }, 1000);
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
