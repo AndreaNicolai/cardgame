@@ -8,6 +8,9 @@
     <title>Document</title>
 
     <style>
+        .counter {
+            font-size: 40px
+        } 
         img {
             width: 300px;
         }
@@ -23,12 +26,12 @@
 
 
     <script>
-        carte = ["3foto.jpg", "3foto.jpg", "4foto.jpg", "4foto.jpg", "altracarta.jpg", "altracarta.jpg"]
-        let NcarteGirate = 0;
+        carte = ["3foto.jpg", "3foto.jpg", "4foto.jpg", "4foto.jpg", "altracarta.jpg", "altracarta.jpg"] //questo è l'array, ovvero una lista ordinata di elementi omogenei che contiene le carte//
+        let NcarteGirate = 0; //queste sono le variabili//swqwqz
         let primaCartaGirata = null
         tavolo = document.querySelector('#tavoloDaGioco')
 
-        carte.forEach(element => {
+        carte.forEach(element => { // ci permette di vedere le carte nel documento//
             tavolo.innerHTML += '<img id="' + element + '" src="pokemon-card-back.png" onclick="gira(this)" />'
             console.log('<img id="' + element + '" src="pokemon-card-back.png" />')
         });
