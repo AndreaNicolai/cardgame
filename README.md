@@ -7,4 +7,4 @@ This is a videogame based on players' memory, simply you need to click on the 2 
 
 Try it! [click here](https://andrea-nicolai-2c-jcmaxwell-2023.github.io/cardgame/)
 
-![Screenshot (23)](https://github.com/Andrea-Nicolai-2C-JCMAXWELL-2023/cardgame/assets/124572519/6c037b98-9521-4533-bcdf-1285c61d3d89)
+![image](https://github.com/Andrea-Nicolai-2C-JCMAXWELL-2023/cardgame/assets/124572519/c50548b4-ca13-484f-b6ca-e3287d251a56)
